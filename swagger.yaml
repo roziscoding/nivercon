@@ -1,0 +1,40 @@
+info:
+  title: Nivercon API
+  version: 1.0.0
+  description: API used to demonstrate expresso at nivercon
+  contact:
+    name: Roz
+    email: roz@rjmunhoz.me
+  license:
+    name: GPL-3.0
+    url: https://spdx.org/licenses/GPL-3.0-only.html
+openapi: 3.0.1
+paths:
+  /dummy:
+    post:
+      description: Este endpoint está aqui para fins de teste
+      summary: Dummy endpoint
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                  - message
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  minLength: 1
+              required:
+                - name
